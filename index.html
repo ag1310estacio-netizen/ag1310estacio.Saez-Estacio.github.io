@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumería Elite | Catálogo y Ofertas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/Logo.png" alt="Logo" class="logo-img">
+                PERFUMERÍA
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active-nav" data-target="seccion-inicio">INICIO</a></li>
+                <li><a href="#" data-target="seccion-colecciones">COLECCIONES</a></li>
+                <li><a href="#" data-target="seccion-ofertas">OFERTAS</a></li>
+                <li><a href="#" data-target="seccion-top-ventas">TOP VENTAS</a></li>
+            </ul>
+            <div class="search-cart">
+                <div class="search-container" style="position: relative;">
+                    <input type="text" id="input-buscador" placeholder="Buscar perfume...">
+                    <div id="resultados-busqueda" class="resultados-dropdown" style="display: none;"></div>
+                </div>
+                <div class="cart-icon" id="icono-carrito-header" style="position: relative; cursor: pointer;">
+                    🛒 <span id="contador-carrito" style="position: absolute; top: -8px; right: -10px; background-color: #d32f2f; color: white; font-size: 11px; padding: 2px 6px; border-radius: 50%; display: none;">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- VISTA 1: INICIO -->
+        <div id="seccion-inicio" class="vista-seccion activa">
+            <section class="hero-carousel">
+                <button class="carousel-btn prev">❮</button>
+                <div class="carousel-content">
+                    <div class="slide active" data-bg="img/banner_perfume_1.jpg">
+                        <div class="slide-text">
+                            <h1>Aromas Exclusivos</h1>
+                            <p>Nuevas fragancias que definen tu esencia.</p>
+                            <button>DESCUBRIR</button>
+                        </div>
+                        <div class="slide-image-area">
+                            <img src="img/Exclusivos.jpg" alt="Modelo con perfume">
+                        </div>
+                    </div>
+                    <div class="slide" data-bg="img/banner_perfume_2.jpg">
+                         <div class="slide-text">
+                            <h1>Oferta de Temporada</h1>
+                            <p>Descuento especial en tus favoritos.</p>
+                            <button>COMPRAR AHORA</button>
+                        </div>
+                        <div class="slide-image-area">
+                            <img src="img/Perfume de temporada.jpg" alt="Perfumes en oferta">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next">❯</button>
+            </section>
+
+            <div class="divisor-elegante">
+                <span>✦</span>
+            </div>
+
+            <!-- BOTONES DE CAMPAÑAS CONFIGURADOS -->
+            <section class="grid-campanas">
+                <div class="grid-item" style="background-image: url('img/Belleza.jpg');">
+                    <div class="item-overlay">
+                        <h3>Manifiesto de Belleza</h3>
+                        <p>Celebremos la diversidad de aromas.</p>
+                        <button class="btn-campana" data-accion="belleza">VER MÁS</button>
+                    </div>
+                </div>
+                <div class="grid-item" style="background-image: url('img/Esencia.jpg');">
+                    <div class="item-overlay">
+                        <h3>Esencia Masculina</h3>
+                        <p>Potencia tu personalidad con la mejor fragancia.</p>
+                        <button class="btn-campana" data-accion="coleccion">IR A COLECCIÓN</button>
+                    </div>
+                </div>
+                <div class="grid-item product-highlight" style="background-image: url('img/Aurora.jpg');">
+                    <div class="item-overlay">
+                        <h3>Novedad: Colección Aurora</h3>
+                        <p>Frescura y elegancia para todos los días.</p>
+                        <button class="btn-campana" data-accion="novedad">COMPRAR NOVEDAD</button>
+                    </div>
+                </div>
+                <div class="grid-item product-offer" style="background-image: url('img/Descuentos.jpg');">
+                    <div class="item-overlay">
+                        <span class="tag-offer">AHORRA 30%</span>
+                        <h3>Set de Regalo Exclusivo</h3>
+                        <p>El detalle perfecto para esa persona especial.</p>
+                        <button class="btn-campana" data-accion="oferta">APROVECHAR OFERTA</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- VISTA 2: COLECCIONES -->
+        <div id="seccion-colecciones" class="vista-seccion" style="display: none;">
+            <section class="seccion-categorias">
+                <div class="titulo-seccion">
+                    <h2>Nuestras Colecciones</h2>
+                    <p>Explora las familias olfativas diseñadas para cada momento de tu vida.</p>
+                </div>
+
+                <div class="categorias-grid">
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Frescas.jpg');"></div>
+                        <div class="categoria-info">
+                            <h3>Cítricas y Frescas</h3>
+                            <p>Fragancias ligeras y revitalizantes con notas de bergamota, limón y azahar ideales para el uso diario.</p>
+                            <button class="btn-modal" data-coleccion="citricas">CONOCE MÁS</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Aurora.jpg');"></div>
+                        <div class="categoria-info">
+                            <h3>Orientales y Cálidas</h3>
+                            <p>Aromas profundos y seductores con especias exóticas, vainilla y ámbar que dejan una huella inolvidable.</p>
+                            <button class="btn-modal" data-coleccion="orientales">CONOCE MÁS</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Esencia.jpg');"></div>
+                        <div class="categoria-info">
+                            <h3>Amaderadas y Elegantes</h3>
+                            <p>Notas intensas de cedro, sándalo y vetiver que transmiten fuerza, sofisticación y distinción absoluta.</p>
+                            <button class="btn-modal" data-coleccion="amaderadas">CONOCE MÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- VISTA 3: OFERTAS -->
+        <div id="seccion-ofertas" class="vista-seccion" style="display: none;">
+            <section class="seccion-categorias">
+                <div class="titulo-seccion">
+                    <h2>Ofertas Especiales</h2>
+                    <p>Aprovecha descuentos exclusivos por tiempo limitado en fragancias seleccionadas.</p>
+                </div>
+
+                <div class="categorias-grid">
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Beauty\ rose\ edition\ special.jpg');"></div>
+                        <div class="categoria-info">
+                            <span class="tag-offer">-30% DESCUENTO</span>
+                            <h3>Beauty Rose Edición Especial</h3>
+                            <p><del>$65.00</del> <strong>$45.50</strong></p>
+                            <button class="btn-comprar-mini">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Summer.jpg');"></div>
+                        <div class="categoria-info">
+                            <span class="tag-offer">-25% DESCUENTO</span>
+                            <h3>Aurora Summer Breeze</h3>
+                            <p><del>$55.00</del> <strong>$41.25</strong></p>
+                            <button class="btn-comprar-mini">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Intense.jpg');"></div>
+                        <div class="categoria-info">
+                            <span class="tag-offer">-40% LIQUIDACIÓN</span>
+                            <h3>Esencia Noir Intense</h3>
+                            <p><del>$80.00</del> <strong>$48.00</strong></p>
+                            <button class="btn-comprar-mini">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- VISTA 4: TOP VENTAS -->
+        <div id="seccion-top-ventas" class="vista-seccion" style="display: none;">
+            <section class="seccion-categorias">
+                <div class="titulo-seccion">
+                    <h2>Top Ventas</h2>
+                    <p>Los perfumes más icónicos y preferidos por nuestros clientes.</p>
+                </div>
+
+                <div class="categorias-grid">
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Royal.jpg');"></div>
+                        <div class="categoria-info">
+                            <h3>Royal Wood Sándalo</h3>
+                            <p>El favorito indiscutible de la temporada por su elegancia inigualable.</p>
+                            <button class="btn-detalles" data-perfume="royal-wood" style="padding: 12px 25px; font-size: 12px; font-weight: bold; background-color: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer;">VER DETALLES</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Floral Velvet.jpg');"></div>
+                        <div class="categoria-info">
+                            <h3>Floral Velvet</h3>
+                            <p>Una fragancia cautivadora que arrasa en ventas cada semana.</p>
+                            <button class="btn-detalles" data-perfume="floral-velvet" style="padding: 12px 25px; font-size: 12px; font-weight: bold; background-color: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer;">VER DETALLES</button>
+                        </div>
+                    </div>
+                    <div class="categoria-card">
+                        <div class="categoria-img" style="background-image: url('img/Critic Energy.jpg');"></div>
+                        <div class="categoria-info">
+                            <h3>Citric Energy Gold</h3>
+                            <p>Frescura superior elegida por miles de clientes satisfechos.</p>
+                            <button class="btn-detalles" data-perfume="citric-energy" style="padding: 12px 25px; font-size: 12px; font-weight: bold; background-color: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer;">VER DETALLES</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- VENTANA MODAL DEL CARRITO DE COMPRAS -->
+    <div id="modal-carrito" class="modal-overlay">
+        <div class="modal-content modal-carrito-content">
+            <button class="modal-close" id="cerrar-modal-carrito">&times;</button>
+            <h2 class="carrito-titulo">Tu Carrito de Compras</h2>
+            <div id="lista-carrito" class="lista-carrito-container">
+                <!-- Los ítems agregados se insertan dinámicamente aquí -->
+            </div>
+            <div class="carrito-footer">
+                <div class="total-carrito">
+                    <span>Total:</span>
+                    <strong id="precio-total-carrito">$0.00</strong>
+                </div>
+                <button id="btn-vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- VENTANA MODAL GENERAL DE INFORMACIÓN -->
+    <div id="modal-coleccion" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div id="vista-info">
+                    <h3 id="modal-titulo">Título</h3>
+                    <p id="modal-descripcion">Descripción detallada...</p>
+                    <div id="modal-extra-info" style="margin: 15px 0; font-size: 14px; color: #555;"></div>
+                    <button id="btn-ver-catalogo" class="modal-action-btn" style="display:none;">VER TODOS LOS PERFUMES</button>
+                </div>
+
+                <div id="vista-catalogo" class="catalogo-interno" style="display: none;">
+                    <button id="btn-volver-info" class="btn-regresar">❮ Volver a la descripción</button>
+                    <h3 id="catalogo-titulo-principal">Catálogo de la Colección</h3>
+                    <div class="catalogo-grid-modal">
+                        <div class="perfume-mini-card">
+                            <div class="perfume-mini-img" style="background-image: url('img/fresas.jpg');"></div>
+                            <h4>Beauty Rose Edición</h4>
+                            <p class="perfume-precio">$45.00</p>
+                            <button class="btn-comprar-mini">AÑADIR AL CARRITO</button>
+                        </div>
+                        <div class="perfume-mini-card">
+                            <div class="perfume-mini-img" style="background-image: url('img/Aurora\ summer\ breze\ caro.jpg');"></div>
+                            <h4>Aurora Summer Breeze</h4>
+                            <p class="perfume-precio">$52.00</p>
+                            <button class="btn-comprar-mini">AÑADIR AL CARRITO</button>
+                        </div>
+                        <div class="perfume-mini-card">
+                            <div class="perfume-mini-img" style="background-image: url('img/Royal\ caro.jpg');"></div>
+                            <h4>Royal Wood Sándalo</h4>
+                            <p class="perfume-precio">$60.00</p>
+                            <button class="btn-comprar-mini">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 PERFUMERÍA ELITE. Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+        </ul>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
